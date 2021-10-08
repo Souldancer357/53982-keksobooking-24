@@ -33,7 +33,7 @@ console.log(getRandomIntInclusive(3, 5));
 * @param max          {number} - Максимальное значение из диапазона.
 * @param min          {number} - Минимальное значение из диапазона.
 * @param numbeOfSigns {number} - Необязательный параметр. Количество цифр после десятичной
-* @return {number}    - Возвращает -1, если входные параметры не верны.
+* @return {number}             - Возвращает -1, если входные параметры не верны.
 **/
 
 function getRandomFractional(min, max, numbeOfSigns) {
