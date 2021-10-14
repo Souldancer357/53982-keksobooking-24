@@ -7,17 +7,14 @@
 
 function getRandomIntInclusive(min, max) {
   if (min === undefined || max === undefined) {
-    console.log('Не указано значение "От" или "До". Либо не указаны оба значения.');
     return -1;
   }
 
   if (min < 0 || max < 0) {
-    console.log('Одно из значений отрицательное. Либо оба значения отрицательные.');
     return -1;
   }
 
   if (min >= max) {
-    console.log('Значение "До" не может быть меньше или равно значению "От"');
     return -1;
   }
 
@@ -37,17 +34,14 @@ function getRandomIntInclusive(min, max) {
 function getRandomFractional(min, max, numbeOfSigns) {
 
   if (min === undefined || max === undefined) {
-    console.log('Не указано значение "От" или "До". Либо не указаны оба значения.');
     return -1;
   }
 
   if (min < 0 || max < 0) {
-    console.log('Одно из значений отрицательное. Либо оба значения отрицательные.');
     return -1;
   }
 
   if (min >= max) {
-    console.log('Значение "До" не может быть меньше или равно значению "От"');
     return -1;
   }
 
@@ -203,6 +197,4 @@ const createOffer = () => ({
 });
 
 const similarOffers = Array.from({length: 10}, createOffer);
-
-console.log(similarOffers);
 
