@@ -198,4 +198,4 @@ const createOffer = () => ({
 
 const similarOffers = Array.from({length: 10}, createOffer);
 
-document.getElementById('elements').innerHTML= JSON.stringify(similarOffers);
+document.getElementById('element').innerHTML= JSON.stringify(similarOffers);
