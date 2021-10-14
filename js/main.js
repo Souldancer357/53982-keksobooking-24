@@ -173,12 +173,12 @@ const getRandomArrayElement = (elements) => elements[getRandomIntInclusive(0, el
 
 const createOffer = () => ({
   author: {
-    avatar: 'img/avatars/user' + getRandomArrayElement(AVATARS) + '.png',
+    avatar: `img/avatars/user${getRandomArrayElement(AVATARS)}.png`,
   },
 
   offer: {
     title: getRandomArrayElement(TITLES),
-    address: location.lat + ', ' + location.lng,
+    address: `${location.lat}, ${location.lng}`,
     price: getRandomIntInclusive(1, 6000),
     type: getRandomArrayElement(TYPES),
     rooms: getRandomIntInclusive(1, 5),
