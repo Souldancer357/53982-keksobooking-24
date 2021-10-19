@@ -7,17 +7,14 @@
 
 function getRandomIntInclusive(min, max) {
   if (min === undefined || max === undefined) {
-    console.log('Не указано значение "От" или "До". Либо не указаны оба значения.');
     return -1;
   }
 
   if (min < 0 || max < 0) {
-    console.log('Одно из значений отрицательное. Либо оба значения отрицательные.');
     return -1;
   }
 
   if (min >= max) {
-    console.log('Значение "До" не может быть меньше или равно значению "От"');
     return -1;
   }
 
@@ -26,30 +23,25 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(getRandomIntInclusive(3, 5));
-
 /**
 * Функция, возвращающая случайное число с плавающей точкой из переданного диапазона с указанным количеством знаков после запятой.
 * @param max          {number} - Максимальное значение из диапазона.
 * @param min          {number} - Минимальное значение из диапазона.
-* @param numbeOfSigns {number} - Необязательный параметр. Количество цифр после десятичной
+* @param numbeOfSigns {number} - Необязательный параметр. Количество цифр после десятичной запятой.
 * @return {number}             - Возвращает -1, если входные параметры не верны.
 **/
 
 function getRandomFractional(min, max, numbeOfSigns) {
 
   if (min === undefined || max === undefined) {
-    console.log('Не указано значение "От" или "До". Либо не указаны оба значения.');
     return -1;
   }
 
   if (min < 0 || max < 0) {
-    console.log('Одно из значений отрицательное. Либо оба значения отрицательные.');
     return -1;
   }
 
   if (min >= max) {
-    console.log('Значение "До" не может быть меньше или равно значению "От"');
     return -1;
   }
 
@@ -57,4 +49,4 @@ function getRandomFractional(min, max, numbeOfSigns) {
   return randomFractionalNumber.toFixed(numbeOfSigns);
 }
 
-console.log(getRandomFractional(3, 5, 3));
+export {getRandomIntInclusive, getRandomFractional};
