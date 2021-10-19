@@ -171,12 +171,17 @@ function getRandomArrayFromPhotos() {
 **/
 const getRandomArrayElement = (elements) => elements[getRandomIntInclusive(0, elements.length - 1)];
 
-const createOffer = () => ({
-  author: {
+const createOffer = () => {
+  const author = {
     avatar: `img/avatars/user${getRandomArrayElement(AVATARS)}.png`,
-  },
+  };
 
-  offer: {
+  const location = {
+    lat: getRandomFractional(35.65000, 35.70000, 5),
+    lng: getRandomFractional(139.70000, 139.80000, 5),
+  };
+
+  const offer = {
     title: getRandomArrayElement(TITLES),
     address: `${location.lat}, ${location.lng}`,
     price: getRandomIntInclusive(1, 6000),
@@ -188,13 +193,14 @@ const createOffer = () => ({
     features: getRandomArrayFromFeatures(),
     description: getRandomArrayElement(DESCRIPTIONS),
     photos: getRandomArrayFromPhotos(PHOTOS),
-  },
+  };
 
-  location: {
-    lat: getRandomFractional(35.65000, 35.70000, 5),
-    lng: getRandomFractional(139.70000, 139.80000, 5),
-  },
-});
+  return {
+    author,
+    location,
+    offer,
+  };
+};
 
 const similarOffers = Array.from({length: 10}, createOffer);
 
